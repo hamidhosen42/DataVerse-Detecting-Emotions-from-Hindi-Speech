@@ -1,0 +1,61 @@
+# Credentials and local configuration
+token.txt
+.env
+.env.*
+!.env.example
+kaggle.json
+.aws/
+
+# Competition audio and downloaded datasets
+/data/
+*.wav
+*.mp3
+*.flac
+*.zip
+*.tar
+*.tar.gz
+
+# Model weights and generated feature caches
+/research/local_ft/
+/research/work/emb/
+/research/work/frames/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.pkl
+*.joblib
+.cache/
+
+# Python environments and notebook temporary files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# macOS files
+.DS_Store
+._*
+
+# Never published: competition data and anything derived from it (labels, transcripts, features, predictions),
+# third-party material, private backups. Kept locally only. See README -> Data.
+/research/work/
+/research/submissions/
+/research/b9_outputs/
+/research/official/
+/research/top_teams/
+/research/kaggle_kernels/
+/research/notebooks/
+/research/resources/
+/research/scripts/source_repo_overlap.py
+/research/KAGGLE_WRITEUP.md
+/public_notebooks/
+/my_submissions/
+/drive_upload/
+/DataVerse_Score_Improvement_Package/
+*submission*.csv
+*.bundle
