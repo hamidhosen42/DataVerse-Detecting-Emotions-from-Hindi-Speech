@@ -1,3 +1,7 @@
+# This repository publishes code, notebooks and reports only.
+# Competition data and anything derived from it (labels, transcripts, features, probabilities, submissions) must never
+# be committed: the competition rules forbid redistributing the data. See README -> Data.
+
 # Credentials and local configuration
 token.txt
 .env
@@ -6,7 +10,7 @@ token.txt
 kaggle.json
 .aws/
 
-# Competition audio and downloaded datasets
+# Competition data, audio and archives
 /data/
 *.wav
 *.mp3
@@ -15,10 +19,7 @@ kaggle.json
 *.tar
 *.tar.gz
 
-# Model weights and generated feature caches
-/research/local_ft/
-/research/work/emb/
-/research/work/frames/
+# Model weights, feature caches, predictions and backups
 *.pt
 *.pth
 *.ckpt
@@ -27,6 +28,8 @@ kaggle.json
 *.npz
 *.pkl
 *.joblib
+*.bundle
+*submission*.csv
 .cache/
 
 # Python environments and notebook temporary files
@@ -41,21 +44,42 @@ venv/
 .DS_Store
 ._*
 
-# Never published: competition data and anything derived from it (labels, transcripts, features, predictions),
-# third-party material, private backups. Kept locally only. See README -> Data.
-/research/work/
-/research/submissions/
-/research/b9_outputs/
-/research/official/
-/research/top_teams/
-/research/kaggle_kernels/
-/research/notebooks/
-/research/resources/
-/research/scripts/source_repo_overlap.py
-/research/KAGGLE_WRITEUP.md
-/public_notebooks/
+# Local-only material (submission archive, third-party notebooks and packages, private backups, long research report)
 /my_submissions/
+/public_notebooks/
 /drive_upload/
 /DataVerse_Score_Improvement_Package/
-*submission*.csv
-*.bundle
+/DataVerse_Hindi_SER_Deep_Analysis.md
+
+# research/: publish only the final report, ledgers, write-up and images ...
+/research/*
+!/research/B9_experiment_report.md
+!/research/B9_ledger.csv
+!/research/experiments.csv
+!/research/KAGGLE_WRITEUP_CONTENT.md
+!/research/writeup_media/
+!/research/scripts/
+
+# ... and only the scripts of the final pipeline. A new script is published only after it is listed here.
+/research/scripts/*
+!/research/scripts/audit_data.py
+!/research/scripts/near_duplicates.py
+!/research/scripts/embed.py
+!/research/scripts/embed2.py
+!/research/scripts/blend_all.py
+!/research/scripts/cv_frozen.py
+!/research/scripts/whisper_lora.py
+!/research/scripts/whisper_lora_top.py
+!/research/scripts/whisper_lpft.py
+!/research/scripts/b9_audit.py
+!/research/scripts/b9_eval.py
+!/research/scripts/b9_diagnostics.py
+!/research/scripts/b9_trackb_blend.py
+!/research/scripts/b9_prepare_cache.py
+!/research/scripts/b9_frozen_parity.py
+!/research/scripts/b9_dupscan_parity.py
+!/research/scripts/b10_eval.py
+!/research/scripts/e11_local_eval.py
+!/research/scripts/build_b9_notebook.py
+!/research/scripts/build_b8_notebook.py
+!/research/scripts/build_b6_notebook.py

@@ -43,10 +43,9 @@ report, including negative results, is [`research/B9_experiment_report.md`](rese
 |---|---|
 | `notebooks/B9_hindi_ser_final.ipynb` | **Complete train + inference pipeline.** Kaggle/local path detection, smoke and full modes, pinned model revisions, cached stages, submission assertions. Its default reproduces B8. |
 | `notebooks/B8_whisper_lora_blend.ipynb`, `notebooks/B6_whisper_blend.ipynb` | The notebooks behind the B8 and B6 submissions. |
-| `research/scripts/` | All analysis and experiment code: feature extraction, LoRA / LP-FT training, CV, bootstrap evaluation, diagnostics, notebook builders. |
-| `research/B9_experiment_report.md`, `research/B9_ledger.csv`, `research/experiments.csv` | Experiment reports and ledgers with measured results. |
-| `DataVerse_Hindi_SER_Deep_Analysis.md` | Initial research report: data audit, metric, validation design, literature and resources. |
-| `research/*.csv`, `research/TOP_100_RESOURCES.md` | Curated external resources, public notebooks and discussions. |
+| `research/scripts/` | The final pipeline's code: data audit, near-duplicate grouping, frozen-feature extraction, family blending, LoRA / LP-FT training, evaluation (CV, paired bootstrap, diagnostics, parity checks) and the notebook builders. |
+| `research/B9_experiment_report.md`, `research/B9_ledger.csv`, `research/experiments.csv` | Final experiment report and ledgers with measured results. |
+| `research/KAGGLE_WRITEUP_CONTENT.md`, `research/writeup_media/` | Competition write-up and its images. |
 
 ## Data
 
